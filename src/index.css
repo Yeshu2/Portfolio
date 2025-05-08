@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background: #161513 !important; /* Use !important to force the background color */
+  color: white !important;
+  font-family: 'Outfit', sans-serif !important;
+  scroll-behavior: smooth; /* ✅ Smooth scrolling added */
+}

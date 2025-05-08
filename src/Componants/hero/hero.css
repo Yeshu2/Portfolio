@@ -1,0 +1,51 @@
+.hero-container {
+    padding-top: 60px;
+    /* padding-bottom: 60px; */
+  }
+  
+  .hero-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 4px solid #8B41A2;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hero-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .hero-description {
+    font-size: 16px;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .hero-resume-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background: linear-gradient(90deg, #8B41A2, #983F7F, #AF3B52, #BD3633);
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hero-resume-button:hover {
+    background: linear-gradient(90deg, #BD3633, #AF3B52, #983F7F, #8B41A2);
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  .gradient-text {
+    background: linear-gradient(90deg, #8B41A2, #983F7F, #AF3B52, #BD3633);
+    background-clip: text;
+    -webkit-background-clip: text!important;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }  
+  
