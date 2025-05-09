@@ -1,7 +1,7 @@
 import React from "react";
 import "./Portfolio.css";
 import IMG1 from "../../assets/project1.jpg";
-import IMG2 from "../../assets/project2.png";
+import IMG2 from "../../assets/Project2.png";
 import { BiCodeAlt } from "react-icons/bi";
 
 const data = [
