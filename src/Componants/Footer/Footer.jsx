@@ -10,7 +10,7 @@ const Footer = () => {
       </a>
     
       <div className="footer__socials">
-        <a href="#" target="blank">
+        <a href="https://www.facebook.com/share/16JVSmTf19/" target="blank">
           <FaFacebook />
         </a>
         <a href="https://www.instagram.com/its_official__yash?igsh=MWtxMnoyc2F1ZTB6dA==" target="blank">
@@ -25,7 +25,7 @@ const Footer = () => {
         <a href="#" target="blank">
           <FaYoutube />
         </a>
-        <a href="#" target="blank">
+        <a href="https://github.com/yashcodeworks" target="blank">
           <FaGithub />
         </a>
       </div>
