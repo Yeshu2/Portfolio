@@ -112,6 +112,7 @@
   
   .portfolio__languages svg {
     color: var(--color-primary);
+    font-size: 1.5rem;
   }
   
   .portfolio__item-cta {

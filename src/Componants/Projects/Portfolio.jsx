@@ -9,19 +9,19 @@ const data = [
     id: 1,
     image: IMG1,
     title: "Project 1",
-    description: "This is my first project showcasing my skills in web development.",
+    description: "Yuvasarthi app is a platform for students to learn and grow.",
     github: "https://github.com",
     demo: "https://project1-demo.com",
-    languages: "React, Node.js, MongoDB",
+    languages: "reactnative, firebase, css3",
   },
   {
     id: 2,
     image: IMG2,
     title: "Project 2",
-    description: "My second project demonstrating advanced UI/UX design principles.",
+    description: "My portfolio website to showcase my work and skills.",
     github: "https://github.com",
     demo: "https://project2-demo.com",
-    languages: "React, CSS3, Firebase",
+    languages: "Html5, Css3, JavaScript, Reactjs",
   },
 ];
 
