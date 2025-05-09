@@ -8,30 +8,56 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    contactno: "",
     message: ""
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
-    console.log("Form submitted:", formData);
-    alert("Message sent successfully!");
-    setFormData({ name: "", email: "", message: "" });
+
+    const payload = {
+      fullname: formData.name,
+      email: formData.email,
+      contactno: formData.contactno || "N/A",
+      message: formData.message,
+    };
+
+    try {
+      const response = await fetch("http://localhost:8001/api/contact/addmessage", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        throw new Error("Something went wrong");
+      }
+
+      const data = await response.json();
+      console.log("Server response:", data);
+      alert("Message sent successfully!");
+      setFormData({ name: "", email: "", contactno: "", message: "" });
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Failed to send message. Please try again later.");
+    }
   };
 
   return (
     <section id="contact">
       <h5>Get In Touch</h5>
       <h2 className="gradient-text">Contact Me</h2>
-      
+
       <div className="container contact__container">
         <div className="contact__options">
           <article className="contact__option">
@@ -40,9 +66,9 @@ const Contact = () => {
             </div>
             <h4>Email</h4>
             <h5>Patilyash205@Outlook.com</h5>
-            <a 
-              href="mailto:Patilyash205@Outlook.com" 
-              target="_blank" 
+            <a
+              href="mailto:Patilyash205@Outlook.com"
+              target="_blank"
               rel="noreferrer"
               className="contact__link"
             >
@@ -56,9 +82,9 @@ const Contact = () => {
             </div>
             <h4>LinkedIn</h4>
             <h5>Yash Patil</h5>
-            <a 
-              href="https://www.linkedin.com/in/yash-patil-b3b25a364?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " 
-              target="_blank" 
+            <a
+              href="https://www.linkedin.com/in/yash-patil-b3b25a364?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              target="_blank"
               rel="noreferrer"
               className="contact__link"
             >
@@ -72,9 +98,9 @@ const Contact = () => {
             </div>
             <h4>WhatsApp</h4>
             <h5>+919767349076</h5>
-            <a 
-              href="https://wa.me/9767349076" 
-              target="_blank" 
+            <a
+              href="https://wa.me/9767349076"
+              target="_blank"
               rel="noreferrer"
               className="contact__link"
             >
@@ -95,7 +121,7 @@ const Contact = () => {
               className="form__input"
             />
           </div>
-          
+
           <div className="form__group">
             <input
               type="email"
@@ -107,7 +133,19 @@ const Contact = () => {
               className="form__input"
             />
           </div>
-          
+
+          <div className="form__group">
+            <input
+              type="text"
+              name="contactno"
+              value={formData.contactno}
+              onChange={handleChange}
+              placeholder="Your Contact Number"
+              required
+              className="form__input"
+            />
+          </div>
+
           <div className="form__group">
             <textarea
               name="message"
@@ -119,7 +157,7 @@ const Contact = () => {
               className="form__textarea"
             ></textarea>
           </div>
-          
+
           <button type="submit" className="btn btn-primary">
             Send Message
           </button>
