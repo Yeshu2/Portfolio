@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button'; // Add this
-import './Hero.css';
+import './hero.css';
 import profilePic from '../../assets/profilepic.jpg';
 
 function Hero() {
