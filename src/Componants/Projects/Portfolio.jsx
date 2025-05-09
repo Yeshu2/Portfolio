@@ -1,7 +1,7 @@
 import React from "react";
 import "./portfolio.css";
 import IMG1 from "../../assets/project1.jpg";
-import IMG2 from "../../assets/project2.jpg";
+import IMG2 from "../../assets/project2.png";
 import { BiCodeAlt } from "react-icons/bi";
 
 const data = [
@@ -27,22 +27,25 @@ const data = [
 
 const Portfolio = () => {
   return (
-    <section id="portfolio" className="portfolio-section">
+    <section id="portfolio">
       <h5>My Recent Work</h5>
-      <h2>Projects</h2>
+      <h2 className="gradient-text">Projects</h2>
       <div className="container portfolio__container">
-        {data.map(
-          ({ id, image, title, github, demo, languages, description }) => {
-            return (
-              <article className="portfolio__item" key={id}>
+        {data.map(({ id, image, title, github, demo, languages, description }) => {
+          return (
+            <article className="portfolio__item" key={id}>
+              <div className="portfolio__header">
+                <h3>{title}</h3>
+              </div>
+              <div className="portfolio__content">
                 <div className="portfolio__item-image">
                   <img src={image} alt={title} />
                 </div>
-                <h3>{title}</h3>
                 <p>{description}</p>
-                <p>
-                  <BiCodeAlt className="mt-1" /> {languages}
-                </p>
+                <div className="portfolio__languages">
+                  <BiCodeAlt />
+                  <span>{languages}</span>
+                </div>
                 <div className="portfolio__item-cta">
                   <a
                     href={demo}
@@ -53,10 +56,10 @@ const Portfolio = () => {
                     Live Demo
                   </a>
                 </div>
-              </article>
-            );
-          }
-        )}
+              </div>
+            </article>
+          );
+        })}
       </div>
     </section>
   );
