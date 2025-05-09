@@ -20,7 +20,7 @@ const data = [
     title: "Project 2",
     description: "My portfolio website to showcase my work and skills.",
     github: "https://github.com",
-    demo: "https://project2-demo.com",
+    demo: "https://yashpatil.onrender.com",
     languages: "Html5, Css3, JavaScript, Reactjs",
   },
 ];
