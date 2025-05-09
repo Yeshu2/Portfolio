@@ -1,5 +1,5 @@
 import React from "react";
-import "./qualification.css";
+import "./Qualification.css";
 import { BiBuildings } from "react-icons/bi";
 import { GoLocation } from "react-icons/go";
 import { TbBuildingBank } from "react-icons/tb";

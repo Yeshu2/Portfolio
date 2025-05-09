@@ -1,5 +1,5 @@
 import React from "react";
-import "./about.css";
+import "./About.css";
 import ME from "../../assets/Aboutpic.jpg";
 import { FaLaptopCode, FaMobileAlt, FaProjectDiagram } from "react-icons/fa";
 import { BiCodeAlt } from "react-icons/bi";

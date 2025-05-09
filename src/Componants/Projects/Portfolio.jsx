@@ -1,5 +1,5 @@
 import React from "react";
-import "./portfolio.css";
+import "./Portfolio.css";
 import IMG1 from "../../assets/project1.jpg";
 import IMG2 from "../../assets/project2.png";
 import { BiCodeAlt } from "react-icons/bi";
